@@ -23,14 +23,13 @@ class Shelf extends Component {
       <Sheet ref={((i) => (sheet) => this.sheets[i] = sheet)(i)} boards={boards} dimensions={dimensions} sheet={sheet} units={units} key={i} label={"Sheet " + (i+1)} filename={"sheet" + (i+1) + ".svg"}/>
       ));
 
-    if(dimensions.leftShelfHeight2 && dimensions.rightShelfHeight2) {
+    if(dimensions.dadoDepth > 0 && dimensions.leftShelfHeight2 && dimensions.rightShelfHeight2) {
       // we have shelf dados for both sides of the middle board so we need to add an extra seet for the right side
 
       let middleBoard = {
         id: "middle"
       };
       sheets.forEach( (sheet) => {
-        let hasMiddle = false;
         sheet.forEach((board) => { 
           if(board.id === "middle") {
             middleBoard.x = 0;
