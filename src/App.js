@@ -82,7 +82,7 @@ class App extends Component {
     <div>
       <h1>Dimensions</h1>
 
-      <p>The following dimensions are referenced in the walkthrough below.</p>
+      <p>You'll need these dimensions if you manually measure where your cuts will go. If you use the Shaper Origin, the SVGs below will contain all the necessary information.</p>
 
       <div>
       {dims}
